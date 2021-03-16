@@ -208,6 +208,7 @@ adb shell chmod 777 -R /data/local/tmp
 adb shell /data/local/tmp/frida-server &
 adb install twitter.apk
 ```
+You need to aquire `twitter.apk` by yourself either from APKPure or APKMirror.
 If at any point you've got `Permission denied` that means you've probably forgot to run `adb root` or you've set incorrect permissions on `/data/local/tmp`. 
 
 Now wait for the apk to install and then launch it.
