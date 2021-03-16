@@ -75,7 +75,7 @@ oauth_token_secret="" #Put your oauth_token_secret inside these brackets
 During login you can get two kinds of wrong messages (except the one where you put incorrect login or password).
 
 You may get
-```json
+```
 <Response [200]>
 {'login_verification_request_id': 'y7r8vIJ6CdGYqEuIYoUcoXnmbp4XxfKh7lih0M', 
 'login_verification_user_id': 1338078861486149632, 
@@ -91,7 +91,7 @@ That means Twitter thinks your account is suspicious. Simply logout and login in
 After you got that, you should be able to login normaly using `ftwitter.py`. If not, check [How to get oauth token with Mitmproxy]().
 
 The second type of message would be
-```json
+```
 {'errors':[{'code':243,'message':'User is over the limit for
 login attempts. Please try again in a n hour'}]}
 ```
