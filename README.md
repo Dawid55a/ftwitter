@@ -284,9 +284,9 @@ Click on the request and click on `Response`. You should see something like this
 Headers may differ based on what request you're looking at.
 Now press `q` on your keyboard, then press `e` and something like this should pop-up
 
-![List of all the available parts](https://i.imgur.com/GTIzwVg.png)
+![List of all the available parts](https://i.imgur.com/PiXafsa.png)
 
-Press `down arrow` key until you get to `response-body` then press `Enter` and `export raw @focus` should appear in the bottom bar.
+Press `down arrow` key until you get to `raw` then press `Enter` and `export raw @focus` should appear in the bottom bar.
 Input the name of the file to which you want to write the response and press `Enter`.
 I named mine `my_resp.txt`.
 
