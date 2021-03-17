@@ -46,15 +46,19 @@ def get_token(identifier, password):
     if code != 200:
         print("Error while attempting to login, check other steps")
     else:
-        print(r.json())
-        print("Copy your oauth_token and secret and write them into the file")
-        print("then you won't have to go through the login process again in the future")
-        global oauth_token_key
-        global oauth_token_secret
-
-        oauth_token_key=r.json()['oauth_token']
-        oauth_token_secret=r.json()['oauth_token_secret']
-        setup()
+        json = r.json()
+        if hasattr(json, 'errors') or hasattr(json,'login_verification_request_id'):
+            print(json)
+        else:
+            global oauth_token_key
+            global oauth_token_secret
+            oauth_token_key=r.json()['oauth_token']
+            oauth_token_secret=r.json()['oauth_token_secret']
+            print('oauth_token_key: '+oauth_token_key)
+            print('oauth_token_secret: '+oauth_token_secret)
+            print("Copy your oauth_token and secret and write them into the file")
+            print("then you won't have to go through the login process again in the future")
+            setup()
 
 
 def setup():
